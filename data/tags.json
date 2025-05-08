@@ -1,0 +1,114 @@
+[
+    {
+        "id": 1,
+        "name": "favorīti"
+    },
+    {
+        "id": 2,
+        "name": "teātris.zip"
+    },
+    {
+        "id": 3,
+        "name": "drāma"
+    },
+    {
+        "id": 4,
+        "name": "komēdija"
+    },
+    {
+        "id": 5,
+        "name": "traģēdija"
+    },
+    {
+        "id": 6,
+        "name": "ģimene"
+    },
+    {
+        "id": 7,
+        "name": "māksla"
+    },
+    {
+        "id": 8,
+        "name": "vēsture"
+    },
+    {
+        "id": 9,
+        "name": "1990s"
+    },
+    {
+        "id": 10,
+        "name": "2000s"
+    },
+    {
+        "id": 11,
+        "name": "2010s"
+    },
+    {
+        "id": 12,
+        "name": "2020s"
+    },
+    {
+        "id": 13,
+        "name": "1/10"
+    },
+    {
+        "id": 14,
+        "name": "2/10"
+    },
+    {
+        "id": 15,
+        "name": "3/10"
+    },
+    {
+        "id": 16,
+        "name": "4/10"
+    },
+    {
+        "id": 17,
+        "name": "5/10"
+    },
+    {
+        "id": 18,
+        "name": "6/10"
+    },
+    {
+        "id": 19,
+        "name": "7/10"
+    },
+    {
+        "id": 20,
+        "name": "8/10"
+    },
+    {
+        "id": 21,
+        "name": "9/10"
+    },
+    {
+        "id": 22,
+        "name": "10/10"
+    },
+    {
+        "id": 23,
+        "name": "1.skatījums"
+    },
+    {
+        "id": 24,
+        "name": "2.skatījums"
+    },
+    {
+        "id": 25,
+        "name": "3.skatījums"
+    },
+    {
+        "id": 26,
+        "name": "birka"
+    },
+    {
+        "id": 27,
+        "name": "jauna birka"
+    },
+    {
+        "id": 28,
+        "name": "cita birka"
+    }
+]

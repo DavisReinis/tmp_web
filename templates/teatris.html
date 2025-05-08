@@ -1,0 +1,61 @@
+{% extends 'base.html' %}
+
+{% block title %}Teātra dienasgrāmata {% endblock %}
+
+{% block content %}
+    <div class="container my-5">
+        <h1>Izveido savu teātra dienasgrāmatu!</h1>
+    </div>
+
+    <div class="container">
+        <div class="row">
+            <div class="col-md-6">
+                <div class="card">
+                    <div class="card-body">
+                        <h5 class="card-title">Ieraksts</h5>
+                        <p class="card-text">Šeit var izveidot ierakstu ar teātra un izrādes nosaukumu, apmeklējuma datumu.</p>
+                        <a href="/ierakstaforma" class="btn btn-dark">Jauns ieraksts</a>
+                    </div>
+                </div>
+            </div>
+
+            <div class="col-md-6">
+                <div class="card">
+                    <div class="card-body">
+                        <h5 class="card-title">Birka</h5>
+                        <p class="card-text">Šeit dienagrāmatas ierakstam var pievienot birkas, lai meklētu ierakstus.</p>
+                        <a href="/create_tag" class="btn btn-dark">Jauna birka</a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <a href="/table" class="btn btn-secondary">Skatīt tabulā</a>
+    <div class="container entries">
+        {% for entry in entries %}
+        <div class="list-group col-md-12">
+            <div class="list-group-item d-flex justify-content-between align-items-center">
+                <div>
+                    <a href="ieraksti.html">{{ entry.title }}</a> <br>
+                    <small>{{ entry.theater }} – {{ entry.date }}</small>
+                    <div class="d-inline ms-2">
+                        {% for tag_id in entry.tags %}
+                        {% set tag = tags | selectattr("id", "equalto", tag_id) | first %}
+                        {% if tag %}
+                        <span class="badge bg-secondary">{{ tag.name }}</span>
+                        {% endif %}
+                        {% endfor %}
+                    </div>
+                </div>
+                <div class="btn-group" role="group">
+<!--                    todo:mplement this function-->
+<!--                    <a href="jaunabirka.html"><button type="button" class="btn btn-warning">Rediģēt</button></a>-->
+                    <a href="/delete_entry/{{ entry.id }}"><button type="button" class="btn btn-danger">Dzēst</button></a>
+                </div>
+            </div>
+        </div>
+        {% endfor %}
+    </div>
+
+{% endblock %}

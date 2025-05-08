@@ -1,0 +1,27 @@
+h1 {
+
+    font-size: 2rem;
+
+}
+
+.card {
+
+    margin-bottom: 15px;
+
+}
+
+.alert {
+
+    font-size: 1.1rem;
+
+}
+
+pre {
+
+    background-color: #f4f4f4;
+
+    padding: 15px;
+
+    border-radius: 5px;
+
+}

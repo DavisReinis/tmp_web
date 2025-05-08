@@ -1,0 +1,138 @@
+[
+    {
+        "id": 1,
+        "theater": "Jaunais Rīgas teātris",
+        "title": "Dzimšanas dienas kūka",
+        "date": "03.02.2023.",
+        "tags": [
+            3,
+            6,
+            12
+        ],
+        "notes": "Izcila aktierspēle un scenogrāfijas pielietojums."
+    },
+    {
+        "id": 2,
+        "theater": "Dailes teātris",
+        "title": "Rotkho",
+        "date": "18.02.2023.",
+        "tags": [
+            7,
+            8,
+            12
+        ],
+        "notes": "Interesanta tēma, tomēr filmēšana uz skatuves traucēja."
+    },
+    {
+        "id": 3,
+        "theater": "Valmieras Drāmas teātris",
+        "title": "Es arī te, kas man jādara",
+        "date": "19.03.2024.",
+        "tags": [
+            3,
+            4,
+            12
+        ],
+        "notes": "Skaista scenogrāfija, laba aktierspēle un joki."
+    },
+    {
+        "id": 4,
+        "theater": "Jaunais Rīgas teātris",
+        "title": "Lai Dievs stāv tev klāt, tu nabaga cietēj!",
+        "date": "04.10.2024.",
+        "tags": [
+            3,
+            5,
+            12
+        ],
+        "notes": "Ļoti pārdomāts darbs, kur vienkāršība ir autora priekšrocība."
+    },
+    {
+        "id": 5,
+        "theater": "Jaunais Rīgas teātris",
+        "title": "Oblomovs",
+        "date": "22.10.2024.",
+        "tags": [
+            3,
+            8,
+            11
+        ],
+        "notes": "Ļoti smieklīgs, tomēr skaudrs stāsts, kurā katrs var saskatīt daļiņu sevis."
+    },
+    {
+        "id": 6,
+        "theater": "Latvijas Nacionālais teātris",
+        "title": "test izrade",
+        "date": "test date",
+        "tags": [],
+        "notes": "piezimes"
+    },
+    {
+        "id": 7,
+        "theater": "Latvijas Nacionālais teātris",
+        "title": "test izrade",
+        "date": "test date",
+        "tags": [],
+        "notes": ""
+    },
+    {
+        "id": 10,
+        "theater": "Latvijas Nacionālais teātris",
+        "title": "asf",
+        "date": "asdf",
+        "tags": [],
+        "notes": "asdf"
+    },
+    {
+        "id": 11,
+        "theater": "Ģertrūdes ielas teātris",
+        "title": "af",
+        "date": "asdf",
+        "tags": [],
+        "notes": ""
+    },
+    {
+        "id": 12,
+        "theater": "testing new logic",
+        "title": "izrasdf",
+        "date": "date, must be validation updated",
+        "tags": [
+            27,
+            28,
+            12
+        ],
+        "notes": ""
+    },
+    {
+        "id": 13,
+        "theater": "Ģertrūdes ielas teātris",
+        "title": "asdffff",
+        "date": "asdffff",
+        "tags": [],
+        "notes": ""
+    },
+    {
+        "id": 14,
+        "theater": "Latvijas Nacionālais teātris",
+        "title": "asdf",
+        "date": "asdf",
+        "tags": [],
+        "notes": ""
+    },
+    {
+        "id": 15,
+        "theater": "Latvijas Nacionālais teātris",
+        "title": "asdf",
+        "date": "12.04.2025",
+        "tags": [],
+        "notes": ""
+    },
+    {
+        "id": 16,
+        "theater": "Jaunais Rīgas teātris",
+        "title": "asf",
+        "date": "12.12.1212.",
+        "tags": [],
+        "notes": ""
+    }
+]

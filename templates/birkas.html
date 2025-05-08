@@ -1,0 +1,44 @@
+{% extends 'base.html' %}
+
+{% block title %}Teātra dienasgrāmata {% endblock %}
+
+{% block content %}
+{% if error %}
+    alert({{ error }});
+{% endif %}
+
+    <style>
+        .btn-wrapper {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 5px;
+        }
+        .btn-wrapper .btn {
+            flex: 0 0 8.33%; 
+            max-width: 8.33%; 
+        }
+
+        .badge.selected {
+            background-color: #ffc107 !important;
+            color: black !important;
+        }
+    </style>
+
+    <div class="container my-5">
+        <h1>Birkas</h1>
+    </div>
+    <a href="/create_tag" class="btn btn-secondary">Izveidot Birku</a>
+    <div class="container">
+        <div class="list-group col-md-12">
+            {% for tag in tags %}
+            <div class="list-group-item d-flex justify-content-between align-items-center">
+                <a href="/search?keyword={{ tag.name }}">{{ tag.name }}</a>
+                <div class="btn-group" role="group">
+                    <a href="/delete_tag/{{tag.id}}" class="btn btn-danger">Dzēst</a>
+                </div>
+            </div>
+            {% endfor %}
+        </div>
+    </div>
+
+{% endblock %}

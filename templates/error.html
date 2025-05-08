@@ -1,0 +1,10 @@
+{% extends "base.html" %}
+
+{% block title %}Kļūda {{ error_code }}{% endblock %}
+
+{% block content %}
+<div class="container text-center my-5">
+  <p class="lead">{{ error_msg }}</p>
+  <a href="{{ back_url }}" class="btn btn-primary">Atpakaļ</a>
+</div>
+{% endblock %}

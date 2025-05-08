@@ -1,0 +1,42 @@
+{% extends 'base.html' %}
+
+{% block title %}Teātra ieraksti {% endblock %}
+
+{% block content %}
+    <div class="container my-5">
+        <h1>Ieraksti</h1>
+    </div>
+
+    <div class="container">
+        <table class="table table-bordered">
+            <thead class="table-dark">
+                <tr>
+                    <th>Teātris</th>
+                    <th>Izrāde</th>
+                    <th>Datums</th>
+                    <th>Birkas</th>
+                    <th>Komentāri</th>
+                </tr>
+            </thead>
+            <tbody>
+            {% for entry in entries %}
+            <tr>
+                <td>{{ entry.theater }}</td>
+                <td>{{ entry.title }}</td>
+                <td>{{ entry.date }}</td>
+                <td>
+                    {% for tag_id in entry.tags %}
+                    {% set tag = tags | selectattr('id', 'equalto', tag_id) | first %}
+                    {% if tag %}
+                    {{ tag.name }}{% if not loop.last %}, {% endif %}
+                    {% endif %}
+                    {% endfor %}
+                </td>
+                <td>{{ entry.notes }}</td>
+            </tr>
+            {% endfor %}
+            </tbody>
+        </table>
+    </div>
+
+{% endblock %}

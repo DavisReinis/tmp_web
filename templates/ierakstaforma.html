@@ -1,0 +1,143 @@
+{% extends 'base.html' %}
+
+{% block title %}Teātra dienasgrāmata {% endblock %}
+
+{% block content %}
+
+    <div class="container my-5">
+        <h1>Pievieno ierakstu!</h1>
+    </div>
+    
+<form action="/submit" method="post" onsubmit="return validateTheaterChoice();">
+    <div class="container">
+        <div class="row">
+            <div class="col-md">
+                <small class="form-text text-muted">Izvēlies vienu no Latvijas teātriem vai ieraksti citu!</small>
+
+                <div class="input-group mb-3">
+                    <label class="input-group-text" for="theaterSelect">Latvijas teātri</label>
+                    <select class="form-select" id="theaterSelect" name="theater">
+                    </select>
+                </div>
+            </div>
+        </div>
+        
+        <div class="row">
+            <div class="col-md">
+                <div class="input-group mb-3">
+                    <span class="input-group-text">Citi teātri</span>
+                    <input type="text" class="form-control" id="theaterInput" name="theater">
+                </div>
+            </div>
+        </div>
+
+        <div class="row">
+            <div class="col-md">
+                <div class="input-group mb-3">
+                    <span class="input-group-text">Izrāde</span>
+                    <input type="text" class="form-control" name="title" required>
+                </div>
+            </div>
+        </div>
+
+        <div class="row">
+            <div class="col-md">
+                <div class="input-group mb-3">
+                    <span class="input-group-text">Datums</span>
+                    <input id="dateInput" type="text" class="form-control" name="date" required>
+                </div>
+            </div>
+        </div>
+
+        <div class="row">
+            <div class="col-md">
+                <div class="input-group mb-3">
+                    <span class="input-group-text">Birkas</span>
+                    <input
+                        type="text"
+                        class="form-control"
+                        name="tags"
+                        placeholder="piemēram: traģēdija, komēdija, absurds"
+                    >
+                </div>
+                <small class="form-text text-muted">
+                    Ieraksti birkas, atdalot tās ar komatiem. Ja birka neeksistē, tā tiks izveidota automātiski.
+                </small>
+            </div>
+        </div>
+
+        <div class="row">
+            <div class="col-md">
+                <div class="input-group mb-3">
+                    <span class="input-group-text">Piezīmes</span>
+                    <input type="text" class="form-control" name="notes">
+                </div>
+            </div>
+        </div>
+
+        <div class="row">
+            <div class="col-md-12">
+                <button type="submit" class="btn btn-dark w-100">Saglabāt!</button>
+            </div>
+        </div>
+    </div>
+</form>
+<script>
+    theatres = [
+        "Latvijas Nacionālais teātris",
+        "Jaunais Rīgas teātris",
+        "Dailes teātris",
+        "Latvijas Nacionālā opera un balets",
+        "Latvijas Leļļu teātris",
+        "Mihaila Čehova teātris",
+        "Ģertrūdes ielas teātris",
+        "Valmieras Drāmas teātris",
+        "Liepājas teātris",
+        "Liepājas Leļļu teātris",
+        "Cēsu Mazais teātris",
+        "Daugavpils teātris",
+        "Rēzeknes teātris “Joriks”",
+        "Ādolfa Alunāna Jelgavas teātris",
+        "Dirty Deal Teatro"
+    ]
+
+    const selector = document.getElementById("theaterSelect")
+    theatres.forEach(theater => {
+        const option = document.createElement("option")
+        option.text = theater
+        option.value = theater
+        selector.appendChild(option)
+    })
+
+    function validateDate() {
+        const dateInput = document.getElementById('dateInput').value;
+
+        const regex = /^\d{2}\.\d{2}\.\d{4}.$/;
+
+        if (!regex.test(dateInput)) {
+            return false;
+        }
+        return true;
+    }
+
+    function validateTheaterChoice() {
+        const select = document.getElementById('theaterSelect');
+        const input = document.getElementById('theaterInput');
+        const selectedTheater = select.value;
+        const inputTheater = input.value.trim();
+
+        const selectChosen = selectedTheater && selectedTheater !== "";
+        const inputFilled = inputTheater.length > 0;
+        if (!validateDate()){
+            alert("Lūdzu, ievadi atbilstošu datumu dd.mm.yyyy.")
+            return false;
+        }
+        if ((selectChosen && !inputFilled) || (!selectChosen && inputFilled) ) {
+            return true;
+        }
+        alert("Lūdzu, izvēlies teātri no saraksta vai ievadi citu teātri – ne abus un ne tukšu!");
+        return false;
+    }
+</script>
+
+{% endblock %}

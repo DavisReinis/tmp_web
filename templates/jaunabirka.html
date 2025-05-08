@@ -1,0 +1,27 @@
+{% extends 'base.html' %}
+
+{% block title %}Jauna birka{% endblock %}
+{% if error %}
+alert({{ error }});
+{% endif %}
+{% block content %}
+<div class="container my-4">
+    <h2>Izveidot jaunu birku</h2>
+
+    <form action="/create_tag" method="post" class="mt-3">
+        <div class="mb-3">
+            <label for="name" class="form-label">Birkas nosaukums</label>
+            <input
+                type="text"
+                class="form-control"
+                id="name"
+                name="name"
+                placeholder="Ievadi birkas nosaukumu"
+                required
+            >
+        </div>
+        <button type="submit" class="btn btn-dark">Izveidot birku</button>
+        <a href="/birkas" class="btn btn-secondary ms-2">Atpakaļ pie birkām</a>
+    </form>
+</div>
+{% endblock %}
